@@ -119,37 +119,6 @@ body {
     background-color: #0056b3;
 }
 
-/* 摄影集部分样式 */
-.portfolio-section {
-    background-color: #fff;
-    padding: 60px 0;
-    text-align: center;
-    margin: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.photo-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.photo-grid img {
-    border: 2px solid #ccc;
-    width: 45%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
 .footer {
     background-color: #343a40;
     color: #bbb;
@@ -165,10 +134,11 @@ body {
 
     .profile-info {
         text-align: center;
-        max-width: 100%;
-    }
+        max-width：100
+        }
 
-    .photo-grid {
-        flex-direction: column;
+    .profile-image img {
+        width: 150px;
+        margin: 0 auto;
     }
 }
