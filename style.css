@@ -1,4 +1,4 @@
-/* 全局样式 */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -8,7 +8,6 @@ body {
     line-height: 1.8;
 }
 
-/* 页眉样式 */
 .header {
     background-color: #007bff;
     padding: 40px;
@@ -22,7 +21,6 @@ body {
     margin: 0;
 }
 
-/* 导航栏样式 */
 .navigation ul {
     list-style: none;
     padding: 0;
@@ -49,75 +47,32 @@ body {
     border-bottom: 2px solid #fff;
 }
 
-/* 个人简介部分样式 */
-.profile-section {
-    background-color: #fff;
+.portfolio-section {
     padding: 60px 0;
     text-align: center;
+}
+
+.project-item {
     margin: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.profile-image img {
-    width: 320px;
+.project-item img {
+    max-width: 100%;
     height: auto;
-    border-radius: 50%;
-    margin: 30px;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.profile-info {
-    max-width: 500px;
-    margin: 20px;
-    text-align: left;
-}
-
-.name {
-    font-size: 2.5em;
-    color: #007bff;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.title {
-    font-size: 1.6em;
-    color: #6c757d;
-    margin-bottom: 20px;
-}
-
-.description {
-    font-size: 1.2em;
+.project-item h3 {
+    font-size: 1.8em;
     margin: 20px 0;
 }
 
-/* 按钮样式 */
-.contact-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
+.project-item p {
     font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-.contact-button:hover {
-    background-color: #0056b3;
-}
-
-/* 页脚样式 */
 .footer {
     background-color: #343a40;
     color: #bbb;
@@ -126,23 +81,14 @@ body {
     font-size: 0.9em;
 }
 
-/* 响应式设计 */
+
 @media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column;
+    .portfolio-section {
+        padding: 30px 20px;
     }
 
-    .profile-info {
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .skills-list li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .profile-image img {
-        width: 150px;
+    .project-item {
+        margin: 20px 0;
     }
 }
+
