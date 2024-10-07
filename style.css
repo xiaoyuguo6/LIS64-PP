@@ -8,6 +8,10 @@ body {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     background-color: #007bff;
     padding: 40px;
     text-align: center;
@@ -65,6 +69,8 @@ body {
 }
 
 .profile-image img {
+    float: left;
+    margin-right: 20px;
     width: 320px;
     height: auto;
     border-radius: 50%;
@@ -73,6 +79,7 @@ body {
 }
 
 .profile-info {
+    position: relative;
     max-width: 500px;
     margin: 20px;
     text-align: left;
@@ -136,6 +143,7 @@ body {
 }
 
 .photo-grid img {
+    border: 2px solid #ccc;
     width: 45%;
     height: auto;
     border-radius: 10px;
