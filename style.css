@@ -7,6 +7,7 @@ body {
     line-height: 1.8;
 }
 
+/* 固定页眉 */
 .header {
     position: fixed;
     top: 0;
@@ -18,12 +19,14 @@ body {
     color: #fff;
 }
 
+/* 主标题样式 */
 .main-heading {
     font-size: 2.8em;
     font-weight: 700;
     margin: 0;
 }
 
+/* 导航栏样式 */
 .navigation ul {
     list-style: none;
     padding: 0;
@@ -50,16 +53,16 @@ body {
     border-bottom: 2px solid #fff;
 }
 
+/* 个人简介部分样式 */
 .profile-section {
     background-color: #fff;
     padding: 60px 0;
     text-align: center;
     margin: 30px;
-    margin-top: 120px; /* 给内容添加顶部外边距，避免被header遮挡 */
+    margin-top: 120px; /* 确保内容不会被固定的header遮挡 */
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
 
 .profile-container {
     display: flex;
@@ -122,6 +125,7 @@ body {
     background-color: #0056b3;
 }
 
+/* 摄影部分样式 */
 .portfolio-section {
     background-color: #fff;
     padding: 60px 0;
@@ -152,6 +156,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* 页脚样式 */
 .footer {
     background-color: #343a40;
     color: #bbb;
@@ -174,3 +179,4 @@ body {
         flex-direction: column;
     }
 }
+
