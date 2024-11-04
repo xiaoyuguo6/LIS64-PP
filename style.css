@@ -1,3 +1,4 @@
+/* 基本样式设置 */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -7,26 +8,35 @@ body {
     line-height: 1.8;
 }
 
+/* 头部样式 */
 .header {
     background-color: #007bff;
     padding: 40px;
     text-align: center;
     color: #fff;
+    position: relative; /* 相对定位 */
 }
 
+/* 主标题样式 */
 .main-heading {
     font-size: 2.8em;
     font-weight: 700;
     margin: 0;
 }
 
+/* 导航栏样式 */
+.navigation {
+    position: relative; /* 相对定位 */
+    z-index: 10;
+    background-color: #343a40;
+    padding: 10px 0;
+}
+
 .navigation ul {
     list-style: none;
-    padding: 0;
     text-align: center;
-    background-color: #343a40;
+    padding: 0;
     margin: 0;
-    padding: 20px 0;
 }
 
 .navigation ul li {
@@ -41,18 +51,21 @@ body {
     font-weight: 600;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff; /* 悬停样式 */
 }
 
+/* 个人简介部分样式 */
 .profile-section {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 60px 20px; /* 添加填充 */
+    margin: 50px auto; /* 外边距样式 */
     text-align: center;
-    margin: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* 相对定位 */
 }
 
 .profile-container {
@@ -70,8 +83,10 @@ body {
     border-radius: 50%;
     margin: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    float: left; /* 浮动效果 */
 }
 
+/* 个人信息部分 */
 .profile-info {
     max-width: 500px;
     margin: 20px;
@@ -83,44 +98,58 @@ body {
     color: #007bff;
     font-weight: bold;
     margin-bottom: 15px;
+    text-transform: uppercase; /* 添加大写转换样式 */
 }
 
 .title {
     font-size: 1.6em;
     color: #6c757d;
+    text-decoration: underline; /* 添加下划线 */
     margin-bottom: 20px;
 }
 
 .description {
     font-size: 1.2em;
     margin: 20px 0;
+    line-height: 1.8; /* 改变行高 */
+    text-align: justify; /* 对齐文本 */
 }
 
 /* 按钮样式 */
 .contact-button {
     background-color: #007bff;
     color: #fff;
-    border: none;
+    border: 2px solid #0056b3; /* 添加边框 */
     padding: 15px 30px;
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加悬停效果 */
     font-weight: bold;
+    position: absolute; /* 绝对定位 */
+    top: 20px;
+    right: 20px;
 }
 
-.contact-button:hover {
-    background-color: #0056b3;
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #0056b3; /* 悬停和焦点时的颜色变化 */
+    transform: scale(1.1); /* 鼠标悬停时放大按钮 */
 }
 
+/* 页脚样式 */
 .footer {
     background-color: #343a40;
     color: #bbb;
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
+    position: fixed; /* 固定定位 */
+    bottom: 0;
+    width: 100%;
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
     .profile-container {
         flex-direction: column;
@@ -131,12 +160,14 @@ body {
         max-width: 100%;
     }
 
-    .skills-list li {
-        display: block;
-        margin: 10px 0;
-    }
-
     .profile-image img {
         width: 150px;
+        float: none; /* 取消浮动 */
+        margin: 0 auto;
+    }
+
+    .contact-button {
+        position: static; /* 移除绝对定位，保证在移动设备上布局合理 */
+        margin-top: 20px;
     }
 }
