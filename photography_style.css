@@ -59,19 +59,23 @@ body {
 
 /* 作品集部分样式 */
 .portfolio-section {
-    background-color: #fff;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff); /* 添加渐变背景，增加视觉层次 */
     padding: 60px 20px; /* 填充样式 */
     margin: 50px auto; /* 外边距样式 */
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
     position: relative; /* 相对定位 */
+    max-width: 1200px; /* 限制最大宽度 */
 }
 
 .portfolio-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
+    font-size: 2.8em; /* 增大字体，使其更加醒目 */
+    color: #007bff; /* 设置与品牌一致的颜色 */
     margin-bottom: 20px;
+    font-weight: bold; /* 加粗标题 */
+    text-transform: uppercase; /* 转换为大写，增加显眼性 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加文本阴影，增强立体感 */
 }
 
 /* 图片网格样式 */
