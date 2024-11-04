@@ -70,9 +70,8 @@ body {
 
 .profile-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 居中对齐 */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -126,8 +125,8 @@ body {
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* 添加悬停效果 */
     font-weight: bold;
-    margin-top: 20px; /* 添加上边距，让按钮与图片之间有一些空隙 */
-    position: static; /* 将绝对定位改为静态，遵循正常文档流 */
+    margin-top: 20px; /* 按钮与文本之间的间距 */
+    position: static; /* 保持静态定位 */
 }
 
 .contact-button:hover,
