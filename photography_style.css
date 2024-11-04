@@ -1,3 +1,4 @@
+/* 基本样式设置 */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -7,27 +8,35 @@ body {
     line-height: 1.8;
 }
 
+/* 头部样式 */
 .header {
     background-color: #007bff;
     padding: 40px;
     text-align: center;
     color: #fff;
+    position: relative; /* 相对定位 */
 }
 
+/* 主标题样式 */
 .main-heading {
     font-size: 2.8em;
     font-weight: 700;
     margin: 0;
 }
 
+/* 导航栏样式 */
+.navigation {
+    position: relative; /* 相对定位 */
+    z-index: 10;
+    background-color: #343a40;
+    padding: 10px 0;
+}
 
 .navigation ul {
     list-style: none;
-    padding: 0;
     text-align: center;
-    background-color: #343a40;
+    padding: 0;
     margin: 0;
-    padding: 20px 0;
 }
 
 .navigation ul li {
@@ -42,19 +51,21 @@ body {
     font-weight: 600;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff; /* 悬停样式 */
 }
 
-
+/* 作品集部分样式 */
 .portfolio-section {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 60px 20px; /* 填充样式 */
+    margin: 50px auto; /* 外边距样式 */
     text-align: center;
-    margin: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* 相对定位 */
 }
 
 .portfolio-section h2 {
@@ -63,6 +74,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* 图片网格样式 */
 .photo-grid {
     display: flex;
     justify-content: center;
@@ -71,22 +83,59 @@ body {
 }
 
 .photo-grid img {
-    border: 2px solid #ccc;
     width: 45%;
     height: auto;
+    border: 2px solid #ccc; /* 添加边框 */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    float: left; /* 浮动效果 */
+    margin: 10px; /* 外边距样式 */
 }
 
+/* 联系部分样式 */
+.contact-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-top: 50px;
+    border: 2px solid #ddd; /* 添加边框样式 */
+}
 
+/* 按钮样式 */
+.contact-button {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #0056b3; /* 添加边框 */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    position: absolute; /* 绝对定位 */
+    top: 20px;
+    right: 20px;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #0056b3; /* 悬停和焦点时的颜色变化 */
+    transform: scale(1.1); /* 鼠标悬停时放大按钮 */
+}
+
+/* 页脚样式 */
 .footer {
     background-color: #343a40;
     color: #bbb;
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
+    position: fixed; /* 固定定位 */
+    bottom: 0;
+    width: 100%;
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
     .photo-grid {
         flex-direction: column;
