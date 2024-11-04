@@ -126,9 +126,8 @@ body {
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* 添加悬停效果 */
     font-weight: bold;
-    position: absolute; /* 绝对定位 */
-    top: 20px;
-    right: 20px;
+    margin-top: 20px; /* 添加上边距，让按钮与图片之间有一些空隙 */
+    position: static; /* 将绝对定位改为静态，遵循正常文档流 */
 }
 
 .contact-button:hover,
@@ -136,6 +135,7 @@ body {
     background-color: #0056b3; /* 悬停和焦点时的颜色变化 */
     transform: scale(1.1); /* 鼠标悬停时放大按钮 */
 }
+
 
 /* 页脚样式 */
 .footer {
