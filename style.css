@@ -126,9 +126,7 @@ body {
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* 添加悬停效果 */
     font-weight: bold;
-    position: absolute; /* 绝对定位 */
-    top: 20px;
-    right: 20px;
+    margin-top: 20px; /* 添加上边距以和图片分开 */
 }
 
 .contact-button:hover,
@@ -144,9 +142,11 @@ body {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
-    position: fixed; /* 固定定位 */
-    bottom: 0;
-    width: 100%;
+    position: relative; /* 将页脚定位为相对，避免在小屏幕上遮挡内容 */
+}
+
+.footer .contact-info {
+    margin-bottom: 10px; /* 给联系方式添加一些间距 */
 }
 
 /* 响应式设计 */
@@ -167,7 +167,7 @@ body {
     }
 
     .contact-button {
-        position: static; /* 移除绝对定位，保证在移动设备上布局合理 */
         margin-top: 20px;
     }
 }
+
