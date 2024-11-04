@@ -142,7 +142,9 @@ body {
     text-align: center; /* 居中对齐内容 */
     border-radius: 10px; /* 添加圆角，增强视觉美感 */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影，使部分更突出 */
+    margin-bottom: 60px; /* 增加底部外边距，留白更充裕 */
 }
+
 
 
 /* 页脚样式 */
