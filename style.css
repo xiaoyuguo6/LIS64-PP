@@ -135,6 +135,15 @@ body {
     transform: scale(1.1); /* 鼠标悬停时放大按钮 */
 }
 
+.contact-section {
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    padding: 40px; /* 添加填充，使内容有一些空隙 */
+    margin: 30px auto; /* 让部分内容居中 */
+    text-align: center; /* 居中对齐内容 */
+    border-radius: 10px; /* 添加圆角，增强视觉美感 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影，使部分更突出 */
+}
+
 
 /* 页脚样式 */
 .footer {
