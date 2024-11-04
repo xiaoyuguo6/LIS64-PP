@@ -1,5 +1,9 @@
-/* 基本样式设置 */
+/* 为整个页面创建 Grid 布局 */
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* 将页面分为头部、主体内容和页脚 */
+    grid-template-columns: 1fr; /* 单列布局 */
+    min-height: 100vh; /* 确保页面高度最少占满视口 */
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -37,10 +41,12 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation ul li {
-    display: inline-block;
     margin: 0 20px;
 }
 
@@ -66,12 +72,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative; /* 相对定位 */
+    max-width: 1200px; /* 限制最大宽度 */
 }
 
 .profile-container {
     display: flex;
-    flex-direction: column; /* 子元素垂直排列 */
+    flex-direction: row; /* 水平方向排列图片和文本 */
     align-items: center; /* 居中对齐 */
+    justify-content: space-between; /* 两端对齐 */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -82,7 +90,6 @@ body {
     border-radius: 50%;
     margin: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    float: left; /* 浮动效果 */
 }
 
 /* 个人信息部分 */
@@ -135,6 +142,7 @@ body {
     transform: scale(1.1); /* 鼠标悬停时放大按钮 */
 }
 
+/* 联系部分样式 */
 .contact-section {
     background-color: #ffffff; /* 设置背景颜色为白色 */
     padding: 40px; /* 添加填充，使内容有一些空隙 */
@@ -144,8 +152,6 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影，使部分更突出 */
     margin-bottom: 60px; /* 增加底部外边距，留白更充裕 */
 }
-
-
 
 /* 页脚样式 */
 .footer {
@@ -172,7 +178,6 @@ body {
 
     .profile-image img {
         width: 150px;
-        float: none; /* 取消浮动 */
         margin: 0 auto;
     }
 
@@ -180,4 +185,62 @@ body {
         position: static; /* 移除绝对定位，保证在移动设备上布局合理 */
         margin-top: 20px;
     }
+}
+
+/* 作品集部分样式 */
+.portfolio-section {
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff); /* 添加渐变背景，增加视觉层次 */
+    padding: 60px 20px; /* 填充样式 */
+    margin: 50px auto; /* 外边距样式 */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    position: relative; /* 相对定位 */
+    max-width: 1200px; /* 限制最大宽度 */
+}
+
+.portfolio-section h2 {
+    font-size: 2.8em; /* 增大字体，使其更加醒目 */
+    color: #007bff; /* 设置与品牌一致的颜色 */
+    margin-bottom: 20px;
+    font-weight: bold; /* 加粗标题 */
+    text-transform: uppercase; /* 转换为大写，增加显眼性 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加文本阴影，增强立体感 */
+}
+
+.photo-grid {
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自动调整列数 */
+    gap: 20px; /* 图片之间的间距 */
+    margin-bottom: 40px;
+}
+
+.photo-grid img {
+    border: 2px solid #ddd; /* 设置浅色边框 */
+    border-radius: 10px; /* 添加圆角 */
+    width: 100%; /* 确保图片适应容器宽度 */
+    height: auto; /* 保持图片比例 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 添加图片阴影效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加悬停效果 */
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* 悬停时加大阴影 */
+}
+
+.view-more-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加按钮悬停效果 */
+}
+
+.view-more-button:hover {
+    background-color: #0056b3; /* 鼠标悬停时颜色变化 */
+    transform: scale(1.05); /* 鼠标悬停时按钮轻微放大 */
 }
