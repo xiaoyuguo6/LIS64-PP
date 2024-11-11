@@ -237,17 +237,12 @@ body {
     transform: scale(1.05); 
 }
 @media (max-width: 768px) {
-    .profile-container {
+    .photo-grid {
         flex-direction: column;
-        align-items: center;
     }
 
-    .profile-image img {
-        width: 150px; /* 调整图片尺寸 */
-    }
-
-    .navigation ul {
-        flex-direction: column;
-        padding: 0;
+    .photo-grid img {
+        width: 80%;
+        margin: 0 auto;
     }
 }
