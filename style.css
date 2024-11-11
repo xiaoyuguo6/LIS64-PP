@@ -239,11 +239,10 @@ body {
 
 @media (max-width: 768px) {
     .photo-grid {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* 改为单列布局 */
     }
-
     .photo-grid img {
-        width: 80%;
-        margin: 0 auto;
+        width: 80%; /* 控制图片宽度 */
+        margin: 0 auto; /* 居中对齐 */
     }
 }
