@@ -1,3 +1,4 @@
+/* 基础样式 */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -6,7 +7,6 @@ body {
     font-size: 16px;
     line-height: 1.8;
 }
-
 
 .header {
     background-color: #007bff;
@@ -54,6 +54,81 @@ body {
     border-bottom: 2px solid #fff;
 }
 
+/* 个人简介部分 */
+.profile-section {
+    background-color: #fff;
+    padding: 60px 20px; 
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    max-width: 1200px; 
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between;
+    flex-wrap: wrap; /* 允许在小屏幕上自动换行 */
+}
+
+.profile-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    max-width: 500px;
+    margin: 20px;
+    text-align: left;
+}
+
+.name {
+    font-size: 2.5em;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 1.6em;
+    color: #6c757d;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2em;
+    margin: 20px 0;
+    line-height: 1.8; 
+    text-align: justify; 
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #0056b3;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    font-weight: bold;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: #0056b3;
+    transform: scale(1.1); 
+}
+
+/* 作品展示部分 */
 .portfolio-section {
     background: linear-gradient(to bottom, #ffffff, #f0f8ff);
     padding: 60px 20px;
@@ -87,37 +162,15 @@ body {
     border: 2px solid #ccc; 
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    float: left; 
-    margin: 10px;
 }
 
+/* 联系方式部分 */
 .contact-section {
     padding: 40px;
     background-color: #f8f9fa;
     text-align: center;
     margin-top: 50px;
     border: 2px solid #ddd;
-}
-
-.contact-button {
-    background-color: #007bff;
-    color: #fff;
-    border: 2px solid #0056b3;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.contact-button:hover,
-.contact-button:focus {
-    background-color: #0056b3;
-    transform: scale(1.1); 
 }
 
 .footer {
@@ -131,13 +184,39 @@ body {
     width: 100%;
 }
 
+/* 响应式样式 */
 @media (max-width: 768px) {
-    .photo-grid {
+    .profile-container {
         flex-direction: column;
+        max-width: 100%; /* 确保小屏幕适应 */
+    }
+
+    .profile-info {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .profile-image img {
+        width: 80%; /* 控制图片宽度适应小屏幕 */
+        margin: 0 auto;
+    }
+
+    .contact-button {
+        position: static;
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .photo-grid {
+        flex-direction: column; /* 改为单列布局 */
     }
 
     .photo-grid img {
-        width: 80%;
+        width: 80%; /* 控制图片宽度 */
         margin: 0 auto;
+    }
+
+    .footer {
+        position: static; /* 小屏幕取消固定定位 */
     }
 }
